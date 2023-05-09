@@ -1,0 +1,8 @@
+{
+  "hello-world": {
+    "component": "HelloWorld"
+  },
+  "contact-save": {
+    "component": "ContactSave"
+  }
+}

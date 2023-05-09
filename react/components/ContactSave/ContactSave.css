@@ -1,0 +1,121 @@
+.contactCreate {
+  margin: 1rem 0;
+  font-family: Open Sans, sans-serif;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #595959;
+}
+
+.textbox,
+.textarea {
+  display: block;
+  margin: 0.75rem 0;
+  width: 50%;
+  border-radius: 9px;
+  border: 1px solid #cacaca;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.textbox:focus,
+.textarea:focus {
+  outline: none;
+  border: 1px solid #cacaca;
+}
+
+.textarea {
+  border-radius: 1rem;
+  height: 70px;
+}
+
+.agreement {
+  display: flex;
+}
+
+.agreement .label {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #000;
+  margin-right: 8px;
+}
+
+.agreement .link {
+  color: #000;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.submitBtn {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #9f1c36;
+  font-size: 1rem;
+  border-radius: 9999px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+}
+
+.error {
+  text-align: center;
+  color: #e1382b;
+}
+
+.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactInfo .heading {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contactInfo .paragraph {
+  font-weight: 300;
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 10;
+}
+
+.contactInfo .paragraph .link {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: #9f1c36;
+  font-size: 1rem;
+  border-radius: 9999px;
+  font-family: Open Sans, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0;
+}

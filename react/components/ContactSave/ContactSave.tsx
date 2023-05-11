@@ -15,26 +15,21 @@ const ContactSave: StorefrontFunctionComponent = (errorMsg) => {
 
   const handleSubmit = (event: any) => {
     event.preventDefault()
-    // setLoadingBtn(true)
+    setLoadingBtn(true)
 
-    const inputData = []
     const formData: any = new FormData(event.currentTarget)
 
-    const obj = {}
+    const result: any = {}
 
     for (const [key, value] of formData.entries()) {
-      // inputData.push({ key })
-      obj.key = value
+      result[key] = value
     }
-
-    // eslint-disable-next-line no-console
-    console.log(obj.keys)
 
     saveToMasterData({
       variables: {
         dataEntity: 'TC',
         document: {
-          document: [...inputData],
+          document: result,
         },
         schema: 'TestContact',
       },
@@ -45,8 +40,6 @@ const ContactSave: StorefrontFunctionComponent = (errorMsg) => {
         setLoadingBtn(false)
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
-        console.log(errorMsg)
         setError(true)
         setSuccess(false)
         setLoadingBtn(false)
@@ -80,16 +73,7 @@ const ContactSave: StorefrontFunctionComponent = (errorMsg) => {
                 className={`${styles.textbox}`}
               />
             </label>
-            <label className={`${styles.label}`}>
-              Message
-              <input
-                type="text"
-                name="message"
-                required
-                placeholder="Message here.."
-                className={`${styles.textbox}`}
-              />
-            </label>
+
             <label className={`${styles.label}`}>
               Subject
               <input
@@ -97,6 +81,15 @@ const ContactSave: StorefrontFunctionComponent = (errorMsg) => {
                 name="subject"
                 required
                 placeholder="Subject"
+                className={`${styles.textbox}`}
+              />
+            </label>
+             <label className={`${styles.label}`}>
+              Message
+              <input
+                type="text"
+                name="message"
+                required
                 className={`${styles.textbox}`}
               />
             </label>

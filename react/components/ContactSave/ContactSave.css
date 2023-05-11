@@ -14,6 +14,7 @@
 .label {
   font-size: 0.875rem;
   color: #595959;
+  font-weight: bold;
 }
 
 .textbox,
@@ -21,8 +22,8 @@
   display: block;
   margin: 0.75rem 0;
   width: 50%;
-  border-radius: 9px;
-  border: 1px solid #cacaca;
+  border-radius: 3px;
+  border: 1px solid #a6a2a2;
   font-size: 0.875rem;
   padding: 1rem;
 }
@@ -30,12 +31,13 @@
 .textbox:focus,
 .textarea:focus {
   outline: none;
-  border: 1px solid #cacaca;
+  border: 1px solid #f0a1a1;
+  background-color: rgb(246, 245, 239);
 }
 
 .textarea {
   border-radius: 1rem;
-  height: 70px;
+  height: 70px;.bg-white-90 { background-color: var(--white-90) }
 }
 
 .agreement {
@@ -94,13 +96,16 @@
   font-size: 2.25rem;
   text-align: center;
   margin: 0 0 1rem 0;
+  position: sticky;
+  display: block;
+  margin-left: 100px;
+  margin-right:  100px;
 }
 
 .contactInfo .paragraph {
   font-weight: 300;
   font-size: 0.875rem;
   text-align: center;
-  margin: 10;
 }
 
 .contactInfo .paragraph .link {
@@ -117,5 +122,4 @@
   font-weight: 500;
   text-transform: uppercase;
   padding: 0.5rem 1.5rem;
-  margin: 1rem 0;
 }

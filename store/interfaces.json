@@ -4,5 +4,8 @@
   },
   "contact-save": {
     "component": "ContactSave"
+  },
+  "contact-load": {
+    "component": "ContactLoad"
   }
 }

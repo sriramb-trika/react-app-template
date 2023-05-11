@@ -72,7 +72,8 @@
     "vtex.render-runtime": "8.x",
     "vtex.product-context": "0.x",
     "vtex.product-availability": "0.x",
-    "projectantelope.integrations": "0.x"
+    "projectantelope.integrations": "0.x",
+    "vtex.file-manager-graphql": "0.x"
   },
   "registries": [
     "smartcheckout"

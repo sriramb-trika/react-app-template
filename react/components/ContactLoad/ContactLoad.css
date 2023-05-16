@@ -1,0 +1,27 @@
+.Box {
+  margin-left: 40px;
+  margin-bottom: 0%;
+  border: 1px black solid;
+  padding: 0.5rem;
+  flex: auto;
+  background-color: aliceblue;
+}
+
+.Box_content {
+  font-size: 16px;
+  text-align: center;
+}
+.Paragraph {
+  background-color: burlywood;
+  flex: auto;
+  padding: 0.5rem;
+  width:100px;
+}
+
+.Button {
+  color: #fffdfd;
+  background-color: cadetblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

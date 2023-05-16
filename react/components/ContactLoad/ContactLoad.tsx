@@ -3,19 +3,19 @@ import { useLazyQuery } from 'react-apollo'
 import { Spinner } from 'vtex.styleguide'
 
 import documents from '../../graphql/getDocument.graphql'
-import ContactDetails from './ContactDetails'
+// import ContactDetails from './ContactDetails'
+import styles from '../ContactLoad/ContactLoad.css'
 
 const ContactLoad: StorefrontFunctionComponent = (
   {}
 ) => {
 
-  console.log("loading...")
   const defaultPageSize = 5
   const[allData, setAllData] = useState<any>([])
-  const[pageNo,setPageNo] = useState(1)
-  // const[sort,setSort]= useState('')
+  const[pageSize,setPageSize] = useState(5)
   const sort = ''
   const showMoreText = 'Show More..'
+
   const baseQuery = {
     acronym : "TC",
     schema: "TestContact"
@@ -23,54 +23,45 @@ const ContactLoad: StorefrontFunctionComponent = (
 
   const initQuery = {
     variables: {
-      acronym : "TC",
-      schema: "TestContact",
-      where: '',
+    ...baseQuery,
       fields: [
         'name',
         'email',
         'subject',
         'message'
       ],
-      page:1,
-      pageSize: defaultPageSize,
-      sort : sort
+      pageSize: pageSize,
+      sort:"name"
     }
   }
 
-  const [getDocuments, {loading, error, data:cData}] = useLazyQuery(documents, initQuery)
-  console.log(cData);
+  const [getDocuments, {data:cData, loading,error}] = useLazyQuery(documents, initQuery)
   useEffect(() => {
-    // if(loading) return
+    if(loading) return
 
     getDocuments({
       variables: {
         ...baseQuery,
-        where: '',
         fields: [
           'name',
           'email',
           'subject',
           'message'
         ],
-        page:pageNo,
-        pageSize: defaultPageSize,
-        sort : sort
+        pageSize: pageSize,
+        sort:"name"
       },
     })
 
     if(!cData?.documents) return
 
-
     if (cData?.documents.length > 0) {
-      pageNo === 1
-        ? setAllData([...cData?.documents])
-        : setAllData([...allData, ...cData?.documents])
+      setAllData([...cData?.documents])
     }
-  }, [cData, pageNo, sort])
+  }, [cData, pageSize, sort])
 
 
-  const filtered = []
+  const filtered:any = []
   if(allData && allData.length > 0) {
     const uniqueValues = new Set(allData)
 
@@ -80,32 +71,46 @@ const ContactLoad: StorefrontFunctionComponent = (
   }
 return(
   <>
-  <div> <ContactDetails details={filtered} /></div>
+  {filtered && filtered.length > 0
+  ? <div>{filtered?.map((item: any) => (
+    <div  className={`flex justify-between pv6 ph5 b--grey`}>
+       <div className={`flex flex-wrap items-center w-100 w-50-m`}>
+       <div className={`${styles.Box}`}>
+                <h2 className={`t-semiBoldFont f5 f4-m ma0 pa0 mb2`}>
+                  {item.fields[0].value !== 'null' && item.fields[0].value}<br/></h2>
+                  {item.fields[1].value !== 'null' && item.fields[1].value}<br/>
+                  <p className={`f8 ma0 pa0 darkgrey`}>{item.fields[2].value !== 'null' && item.fields[2].value}</p>
+                {/* </h2> */}
+                <p className={`f8 ma0 pa0 darkgrey`}>
+                  {`${item.fields[3].value}`}
+                </p>
+              </div>
+    </div></div>
+     )) }</div> : <div><p>Unable to fetch data..</p></div>}
   <div className={'relative mw9 center ph5 mv7 tc'}>
         <div className={``} id="endOfLine">
           {loading ? (
             <p className={`pa0 ma0 themeRed`}>
-              <Spinner size={30} color="currentColor" />
+              <Spinner size={40} color="currentColor" />
             </p>
-          ) : error ? (
-            <p className={`tc pa5`}>Unable to retrieve data</p>
-          ) : null}
-          {!loading ? (
-            <div
-              className={`dib white ph7 pv5 br-pill pointer tc ${
-                cData?.documents.length < defaultPageSize
-                  ? 'bg-disabled'
-                  : 'bg-themeRed'
-              }`}
-              onClick={() => setPageNo(pageNo + 1)}
-              style={{
-                pointerEvents:
-                  cData?.documents.length < defaultPageSize ? 'none' : 'unset',
-              }}
-            >
-              {showMoreText}
+          ) : ( error ?
+            <div>
+                <p className={`tc pa5`}>Unable to retrieve data</p>
+
             </div>
-          ) : null}
+
+           :  <div
+
+          onClick={() => setPageSize(pageSize + 5)}
+          style={{
+            pointerEvents:
+              cData?.documents.length < defaultPageSize ? 'none' : 'unset',
+          } }
+        >
+     <div
+              className={`styles.Button`}>{showMoreText}</div>
+
+        </div>)}
         </div>
       </div>
   </>

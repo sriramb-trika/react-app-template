@@ -52,7 +52,7 @@ const ContactSave: StorefrontFunctionComponent = (errorMsg) => {
       <div className={`${styles.contactInfo}`}>
         <div>
           <h2 className={`${styles.title}`}>Contact Info</h2>
-          <form onSubmit={handleSubmit} className={`${styles.contactCreate}`}>
+          <form onSubmit={handleSubmit} >
             <label className={`${styles.label}`}>
               Name
               <input

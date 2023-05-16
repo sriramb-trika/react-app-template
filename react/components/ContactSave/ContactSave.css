@@ -1,5 +1,4 @@
 .contactCreate {
-  margin: 1rem 0;
   font-family: Open Sans, sans-serif;
 }
 
@@ -98,8 +97,7 @@
   margin: 0 0 1rem 0;
   position: sticky;
   display: block;
-  margin-left: 100px;
-  margin-right:  100px;
+  margin-left: 40px;
 }
 
 .contactInfo .paragraph {

@@ -1,4 +1,11 @@
 {
-  "admin/test": "test",
-  "store/test": "test"
+  "admin/editor.Megamenu.title": "Megamenu",
+  "admin/editor.Megamenu.desc": "Megamenu Component",
+  "admin/editor.Megamenu.firstLevel": "First Level Menu List",
+  "admin/editor.Megamenu.secondLevel": "Second Level Menu List",
+  "admin/editor.Megamenu.thirdLevel": "Third Level Menu List",
+  "admin/editor.Megamenu.fourthLevel": "Fourth Level Menu List",
+  "admin/editor.Megamenu.displayName": "Menu Display Name",
+  "admin/editor.Megamenu.name": "Menu Name",
+  "admin/editor.Megamenu.link": "Menu Link"
 }

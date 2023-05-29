@@ -38,12 +38,12 @@ const Megamenu: StorefrontFunctionComponent = ({
 
   return (
     <>
-      <nav className={`flex mr4 overflow-hidden overflow-x-auto`}>
-        <div className={`flex justify-left`}>
+        <nav className={`flex mr4 overflow-hidden overflow-x-auto`}>
+        <div className={`flex  baskerville f5`}>
           <div className={`flex`}>
             {filteredMenu?.map((menuItem: MegaMenuItem) => (
               <div
-                className={`mh3 f8 flex-auto`}
+                className={`mh3 flex-auto justify-left`}
                 id={`${menuItem.__editorItemTitle
                   .trim()
                   .replace(/\s+/g, '')

@@ -13,5 +13,8 @@
   },
   "megamenu-mobile": {
     "component" : "MegamenuMobile"
+  },
+  "footermenu" : {
+    "component" : "FooterMenu"
   }
 }

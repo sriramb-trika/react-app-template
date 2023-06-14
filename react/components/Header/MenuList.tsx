@@ -41,11 +41,11 @@ const MenuList: FC<MenuListProps> = (props: MenuListProps) => {
                   setCurrentSubMenu(subMenu)
                 }}
               >
-                <span className={`category no-underline db black `}>
+                <span className={`category no-underline db black pointer`}>
                   {subMenu.__editorItemTitle}
                 </span>
                 <span
-                  className={`flex items-center absolute top-0 bottom-0 right-1`}
+                  className={`flex items-center absolute top-0 bottom-0 right-0`}
                 >
                   <RightArrow />
                 </span>
@@ -53,7 +53,7 @@ const MenuList: FC<MenuListProps> = (props: MenuListProps) => {
             )
           )}
           <div className={`pv3 ph5 mt5`}>
-            <Link to={currentMenu.href} className={`ttu black`}>
+            <Link to={currentMenu.href} className={`ttu no-underline`}>
               View All {currentMenu.__editorItemTitle}
             </Link>
           </div>

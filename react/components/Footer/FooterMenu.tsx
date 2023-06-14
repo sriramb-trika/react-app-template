@@ -13,12 +13,13 @@ type FooterType = {
 }
 
 const FooterMenu : StorefrontFunctionComponent<Props> =  ({footerArray}) => {
+
   return (
     <>
     <div className={`${styles.footer}`}>
-      <div className="flex pa4">
+      <div className="flex center">
         {footerArray?.map((item: FooterType) => (
-          <div className="flex-auto mr3">
+          <div className="flex-auto">
             <div className="pv4">
             <Link
               to={item.link}

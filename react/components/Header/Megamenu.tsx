@@ -38,12 +38,12 @@ const Megamenu: StorefrontFunctionComponent = ({
 
   return (
     <>
-        <nav className={`flex mr4 overflow-hidden overflow-x-auto`}>
-        <div className={`flex  baskerville f5`}>
-          <div className={`flex`}>
+      <nav className="flex mr4 pv5 bg-washed-yellow">
+        <div className="flex f5">
+          <div className="flex">
             {filteredMenu?.map((menuItem: MegaMenuItem) => (
               <div
-                className={`mh3 flex-auto justify-left`}
+                className="mh4 flex-auto"
                 id={`${menuItem.__editorItemTitle
                   .trim()
                   .replace(/\s+/g, '')
@@ -51,7 +51,7 @@ const Megamenu: StorefrontFunctionComponent = ({
               >
                 <Link
                   to={menuItem.href}
-                  className={`department no-underline`}
+                  className="department no-underline"
                   onMouseOver={() => {
                     setCurrentMenu(menuItem)
                   }}
@@ -62,19 +62,17 @@ const Megamenu: StorefrontFunctionComponent = ({
             ))}
           </div>
           <div
-            className={`absolute left-0 w-100 bg-white z-1`}
+            className="absolute left-0 w-100 z-1"
             style={{ top: '100%' }}
             onMouseLeave={() => {
               setCurrentMenu(undefined)
               setCurrentSubMenu(undefined)
             }}
           >
-            {
-            currentMenu?.secondLevel && currentMenu?.secondLevel.length > 0 ? (
+            {currentMenu?.secondLevel && currentMenu?.secondLevel.length > 0 ? (
               <div
-                className={`overflow-hidden overflow-y-auto flex-auto pa5 bb ${getNameSlug(
-                  currentMenu.__editorItemTitle
-                )} flex`}
+                className={`overflow-hidden overflow-y-auto flex-auto pa5 bg-washed-green o-90
+                ${getNameSlug(currentMenu.__editorItemTitle)} flex `}
                 style={{ maxHeight: '40vh' }}
               >
                 {thirdSubMenu && thirdSubMenu.length === 0 && (
@@ -82,8 +80,7 @@ const Megamenu: StorefrontFunctionComponent = ({
                     currentMenu={currentMenu}
                     currentSubMenu={currentSubMenu}
                   />
-
-                ) }
+                )}
                 {thirdSubMenu && thirdSubMenu.length > 0 && (
                   <>
                     <MenuList
@@ -157,10 +154,10 @@ Megamenu.schema = {
                         type: 'string',
                         default: '',
                         title: 'admin/editor.Megamenu.link',
-                      }
+                      },
                     },
                   },
-                }
+                },
               },
             },
           },

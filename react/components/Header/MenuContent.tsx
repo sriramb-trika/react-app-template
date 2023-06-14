@@ -33,14 +33,14 @@ const MenuContent: FC<MenuContentProps> = (props: MenuContentProps) => {
                   <div className={`${subsubCat.__editorItemTitle} w-33 pb7`}>
                     <Link
                       to={subsubCat.href}
-                      className={`t-semiBoldFont black no-underline`}
+                      className={`t-semiBoldFont black no-underline pointer`}
                     >
                       {subsubCat.__editorItemTitle}
                     </Link>
                   </div>
                 ))}
               <div className={`pb3`}>
-                <Link to={subMenu.href} className={`ttu red`}>
+                <Link to={subMenu.href} className={`ttu no-underline pointer`}>
                   View All {subMenu.__editorItemTitle}
                 </Link>
               </div>

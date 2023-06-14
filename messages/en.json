@@ -18,6 +18,11 @@
   "admin/editor.FooterMenu.submenuTitlecontent": "Submenu Name",
   "admin/editor.FooterMenu.submenuLinkcontent": "Submenu Link",
 
+  "admin/editor.footerLinks.title": "Footer Links",
+  "admin/editor.footerLinks.description": "Footer Links Description",
+  "admin/editor.footerLinks.Titlecontent": "Name",
+  "admin/editor.footerLinks.Linkcontent": "Link",
+
   "admin/editor.footerSocial.Title": "Name",
   "admin/editor.footerSocial.socialTitlecontent": "Name",
   "admin/editor.footerSocial.socialLinkcontent": "Link",
@@ -35,5 +40,5 @@
   "admin/editor.footerSocial.pininterestimagelink": "Pinterest Image Link",
   "admin/editor.footerSocial.pininterestlink": "Pinterest Link",
   "admin/editor.footerSocial.copyright": "Copyright Text",
-  "admin/editor.footerSocial.allRightsReserved": "All Rights Reserved Text",
+  "admin/editor.footerSocial.allRightsReserved": "All Rights Reserved Text"
 }

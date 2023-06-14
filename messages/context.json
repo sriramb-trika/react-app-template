@@ -18,6 +18,11 @@
   "admin/editor.FooterMenu.submenuTitlecontent": "admin/editor.footer.submenuTitlecontent",
   "admin/editor.FooterMenu.submenuLinkcontent": "admin/editor.footer.submenuLinkcontent",
 
+  "admin/editor.footerLinks.title": "admin/editor.footerLinks.title",
+  "admin/editor.footerLinks.description": "admin/editor.footerLinks.description",
+  "admin/editor.footerLinks.Titlecontent": "admin/editor.footerLinks.Titlecontent",
+  "admin/editor.footerLinks.Linkcontent": "admin/editor.footerLinks.Linkcontent",
+
   "admin/editor.footerSocial.Title": "admin/editor.footerSocial.Title",
   "admin/editor.footerSocial.socialTitlecontent": "admin/editor.footerSocial.socialTitlecontent",
   "admin/editor.footerSocial.socialLinkcontent": "admin/editor.footerSocial.socialLinkcontent",

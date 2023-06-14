@@ -3,11 +3,6 @@ import React  from 'react'
 const ContactDetails : StorefrontFunctionComponent = ({
   filtered
 }) => {
-  console.log(filtered)
-  // useEffect(() => {
-  //   console.log(filtered)
-  // },[filtered])
-
   return (
 
     <>

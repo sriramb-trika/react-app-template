@@ -16,5 +16,14 @@
   },
   "footermenu" : {
     "component" : "FooterMenu"
+  },
+  "footer-links" : {
+    "component" : "FooterLinks"
+  },
+  "footer-component-mobile": {
+    "component": "FooterMenuMobile"
+  },
+  "contact-all": {
+    "component": "ContactAll"
   }
 }
